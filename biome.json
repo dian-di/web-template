@@ -11,7 +11,14 @@
         "useKeyWithClickEvents": "off"
       },
       "nursery": {
-        "useSortedClasses": "error"
+        "useSortedClasses": {
+          "level": "error",
+          "fix": "safe",
+          "options": {
+            "attributes": ["className", "classList"],
+            "functions": ["clsx", "cva", "tw", "cn"]
+          }
+        }
       },
       "suspicious": {
         "noConsoleLog": "off",
