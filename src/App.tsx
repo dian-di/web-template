@@ -1,14 +1,28 @@
 import './App.css'
-import { Button } from "@/components/ui/button"
-import { XIcon } from "lucide-react"
-
+import Home from '@/pages/home'
+import Mine from '@/pages/mine'
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
+import TabBar from './components/tab-bar'
 
 function App() {
+  const navigator = useNavigate()
+  const location = useLocation()
+  const currentPageName = location.pathname
+  const handleTabChange = (value: string) => {
+    navigator(`/${value}`)
+  }
 
+  const showTabs = ['/', '/home', '/mine'].includes(currentPageName)
   return (
-    <div className='flex min-h-svh flex-col items-center justify-center'>
-      <Button className='text-red-500'>Click me</Button>
-      <XIcon className="size-4" />
+    <div className='relative min-h-screen'>
+      <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/home' element={<Home />} />
+        <Route path='/mine' element={<Mine />} />
+      </Routes>
+      {showTabs && <div className='absolute bottom-0 w-full'>
+        <TabBar onTabChange={handleTabChange} />
+      </div>}
     </div>
   )
 }
