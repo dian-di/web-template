@@ -3,6 +3,8 @@ description: Specifies the technologies to be used for backend development, incl
 globs: 
 alwaysApply: false
 ---
-- Use React
+- Use React + Typescript
 - Use shadcnUI for components library
+- Use lucide-react for icon library
+- Use zustand for state management library
 - Use tailwindcss@v4 for css style
