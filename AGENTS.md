@@ -6,11 +6,11 @@ web-template is a React + TypeScript single-page application for {application}, 
 
 ## Tech Stack
 
-- **Framework:** React 19 + TypeScript 6 (latest stable)
+- **Framework:** React 19 + TypeScript 7 (latest stable)
 - **Build tool:** Vite 8
-- **Routing:** react-router-dom v7
+- **Routing:** react-router-dom
 - **Styling:** Tailwind CSS v4 (via @tailwindcss/vite plugin)
-- **Component library:** shadcn/ui (new-york style, lucide icons)
+- **Component library:** shadcn/ui (base-nova style, lucide icons, base-ui)
 - **Icons:** lucide-react
 - **State management:** zustand
 - **Linting / Formatting:** Biome 2.x
